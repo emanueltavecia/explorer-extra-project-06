@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --bg-page: #232327;
+  --text-color: #f1f1f1;
+  --button-color: #f1f1f1;
+  --icon-song: #323238;
+  --icon-song-selected: #ffffff;
+  --bg-song: #e1e1e6;
+  --bg-song-selected: #02799d;
+}
+
+html.light {
+  --bg-page: #ffffff;
+  --text-color: #323238;
+  --button-color: #323238;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-page);
+  height: 100vh;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  padding: 3rem;
+  justify-content: center;
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+  display: none;
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  line-height: 0;
+  color: var(--text-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+.flex {
+  display: flex;
+}
+
+#timer {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#timer span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 7rem;
+  color: var(--text-color);
+}
+
+#controls {
+  gap: 1.5rem;
+}
+
+#controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#controls svg {
+  fill: var(--button-color);
+}
+
+html.running #play,
+html:not(.running) #pause {
+  display: none;
+}
+
+.songs-selector {
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.songs-selector button {
+  background-color: var(--bg-song);
+  border: none;
+  width: 8rem;
+  height: 8rem;
+  display: grid;
+  place-content: center;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.songs-selector svg {
+  fill: var(--icon-song);
+}
+
+@media (min-width: 825px) {
+  body {
+    flex-direction: row;
+    gap: 10vw;
+  }
+
+  #timer span {
+    font-size: 8rem;
+  }
+
+  #controls {
+    gap: 2.5rem;
+  }
+
+  .songs-selector {
+    gap: 2rem;
+  }
+
+  .input-wrapper label {
+    width: 9rem;
+    height: 9rem;
+  }
+}
