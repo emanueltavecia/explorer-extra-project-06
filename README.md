@@ -17,7 +17,7 @@ Challenge developed on Rocketseat's Explorer course
 - Stage 05
 - Challenge 06
 
-## Instructions for use
+## 📝 Instructions for use
 
 - You can increase or decrease the time by 5 minutes with the plus and minus buttons.
 - You can activate one of the 4 background sound options and choose the volume with the slider.
